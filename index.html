@@ -2,34 +2,46 @@
 <html>
 
 <head>
-  <title>🏳️‍⚧️🎤🎶</title>
-  <meta property="og:title" content="🏳️‍⚧️🎤🎶">
-  <meta name="twitter:title" value="🏳️‍⚧️🎤🎶">
+  <title>TransVoiceParty</title>
+  <meta property="og:title" content="🏳️‍⚧️🎤🎶 TransVoiceParty">
+  <meta name="twitter:title" value="🏳️‍⚧️🎤🎶 TransVoiceParty">
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css" />
 
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <script>
+    window.onload = shuffleTeachers;
+
+    function shuffleTeachers() {
+      var shuffles = document.getElementsByClassName('shuffle');
+      for (let i = 0; i < shuffles.length; i++) {
+        for (var j = shuffles[i].children.length; j >= 0; j--) {
+          shuffles[i].appendChild(shuffles[i].children[Math.random() * j | 0]);
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
   <!-- Header. -->
 
-  <script>NekoType = "colourful"</script>
-  <h1 id=nl>
-    <script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a>
-  </h1>
-
   Accessibility:
-  <a href="#" onclick="document.body.style.backgroundColor = 'white';document.body.style.color = 'black';"> Light
-    mode</a>
-  ,
   <a href="#" onclick="document.body.style.backgroundColor = 'black';document.body.style.color = '#ccc';"> Dark mode</a>
   ,
   <a href="#" onclick="document.body.style.fontFamily = 'OpenDyslexic'"> OpenDyslexic</a>
   ,
-  <a href="#" onclick="document.body.style.fontFamily = 'Comic Sans MS'"> Comic Sans</a>
+  <a href="#" onclick="document.body.style.fontFamily = 'Comic Sans MS'"> Comic Sans (windows only)</a>
+  ,
+  <a href="#" onclick="document.body.style.fontSize = '24px'">Large text</a>
+  ,
+  <a href="#" onclick="document.body.style.maxWidth = '100%'">No side padding</a>
+  ,
+  <a href="#" onclick="document.body.removeAttribute('style')"> Reset</a>
 
 
   <hr>
@@ -40,14 +52,10 @@
       <p>if you have any resources, feedback, or issues please contact me! (see footer)</p>
       <hr>
       <p><strong><code>Notice</code></strong></p>
-      <p>The <a href="https://wiki.sumianvoice.com/">SumianVoice wiki</a> is what I've been wanting to encourage the
-        community to develop for a long time (an open wiki ran by teachers). Some time in the future, this page will
-        redirect to the wiki, as I believe it is better for the community to have resources ran by teachers than a
-        random unqualified individual.</p>
-      <p><strong>I am looking for a maintainer! If you are qualified or interested, please contact me.</strong></p>
+      <p>I am starting development of this website again.</p>
       <hr>
       <h1 id="starting-points">Starting points</h1>
-      <ul>
+      <ul class="shuffle">
         <li><a href="https://www.youtube.com/channel/UCBYlEnfAUbrYSwF0VujcmHA">TransVoiceLessons</a>
           <ul>
             <li><a href="https://www.youtube.com/watch?v=ynFqjE2AEGk&amp;list=PLYJkVI7LLpknvBww07jnsxbz-_Lkynsry">Art of
@@ -60,16 +68,15 @@
         <li><a href="https://wiki.sumianvoice.com/">SumianVoice Wiki</a></li>
       </ul>
       <h1 id="communities">Communities</h1>
-      <ul>
+      <ul class="shuffle">
         <li><a href="https://discord.gg/xmXsQvK">Scinguistics</a></li>
-        <li><a href="https://reddit.com/r/TransVoice">r/TransVoice</a></li>
-        <li><a href="https://discord.gg/3reEdmn">TransVoice Discord</a></li>
+        <li><a href="https://reddit.com/r/TransVoice">r/TransVoice</a>, and their Discord (see sidebar)</li>
         <li><a href="https://reddit.com/r/TransSinging">r/TransSinging</a></li>
         <li><a href="https://discord.gg/dbwrQMV">Scientifically Augmented Voice</a></li>
         <li><a href="https://discord.gg/JmzqQAA">Voice Software Dev &amp; Support</a></li>
       </ul>
       <h1 id="youtube-channels">Youtube Channels</h1>
-      <ul>
+      <ul class="shuffle">
         <li><a href="https://www.youtube.com/channel/UCBYlEnfAUbrYSwF0VujcmHA">TransVoiceLessons</a></li>
         <li><a href="https://www.youtube.com/channel/UCq_CN_v2uFIC_Zg_RvRr8Fw/videos">Sumi</a></li>
         <li><a href="https://www.youtube.com/user/scootergoat01">Your Lessons Now</a></li>
@@ -80,7 +87,7 @@
             Training Time</a> (Playlist)</li>
       </ul>
       <h1 id="documentation">Documentation</h1>
-      <ul>
+      <ul class="shuffle">
         <li><a href="https://www.reddit.com/r/transvoice/comments/d3clhe/ls_voice_training_guide_level_1_for_mtf/">L's
             Voice Training Guide for MtF</a></li>
         <li><a href="https://docs.google.com/document/d/1j_-8dndFzKTX0xBSF15ZEJWdw958ryh0IPKq1sz8p04/edit">Transvoice
@@ -97,15 +104,9 @@
         <li><a href="https://www.phon.ucl.ac.uk/courses/spsci/iss/week5.php">Vowel chart</a></li>
         <li><a href="https://docs.google.com/document/d/1IRVpg4ampImZy9Rb6OGIryt3qU9j5m3cL6BGunqfyx8">FAQ from the
             TransVoice discord server</a></li>
-        <li>There's a lot of documents in the #writeups channel of the <a href="https://discord.gg/FAmXNEJ">TransVoice
-            Discord</a></li>
+        <li>There's a lot of documents in the #writeups channel of the r/TransVoice Discord (see communities)</a></li>
         <li>There's also quite a bit of info on <a href="https://www.patreon.com/transvoicelessons/posts">Zheanna
             Erose's patreon</a></li>
-        <li>Savvy has uploaded all of her public (shadowable) <a
-            href="https://www.dropbox.com/sh/uhr4xz2a4nhtkul/AACpaqIjSvQldzbaUCS_oIkfa?dl=0">Fem voice lessons</a> and
-          <a href="https://www.dropbox.com/sh/njfbd2065p8fgw4/AAD9TeMSa2AAjJMoTbb5qNQqa?dl=0">Fem/Masc voice
-            workshops</a>
-        </li>
         <li>Kelly has also uploaded all of her public (shadowable) <a
             href="https://www.dropbox.com/sh/boqw8m8klkuygym/AADJUrLVnzgK_Q4cywithgRqa?dl=0">voice lessons</a></li>
         <li><a href="https://twilightdreamersmith.tumblr.com/post/180945501685/voice-training-through-singing">Voice
@@ -119,77 +120,59 @@
             Voice Guide - Ama</a></li>
       </ul>
       <h1 id="teachers">Teachers</h1>
-      <ul>
-        <li><strong><a href="https://discord.gg/q6mD3y7">Kelly's Voice Lessons</a></strong>
-          <ul>
-            <li>Voice feminization &amp; masculinization</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://ko-fi.com/amaroselessons/">AmaRoseLessons</a></strong> does lessons and free
-          workshops on <a href="https://discord.gg/xmXsQvK">Scinguistics Discord</a>
-          <ul>
-            <li>ID: @Ama#7619</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://fluidvoice.studio/">Fluid Voice Studio</a></strong>
-          <ul>
-            <li>Coaches Dusty and Finch teach voice modification (feminization, masculinization, neutral/androgynous
-              voice, alterhuman voice, expression within plural systems, singing, etc)</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://sumianvoice.com/#">SumianVoice</a></strong>
-          <ul>
-            <li>Lessons for any voice type</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://cramdvoicelessons.blog/">Scinguistics</a></strong>
-          <ul>
-            <li>Singing too</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://discord.gg/dbwrQMV">Savvy</a></strong>
-          <ul>
-            <li>Singing &amp; Beatboxing too</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://www.transvoicelessons.com/">TransVoiceLessons.com</a></strong>
-          <ul>
-            <li>Zheanna &amp; Clover train voice feminization, masculinization &amp; androgynous voice</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://voxnovastudio.com/">Vox Nova Studio (Hearth)</a></strong>
-          <ul>
-            <li>Singing too</li>
-          </ul>
-        </li>
-        <li><strong><a href="https://www.transvoice.coach/">Adi</a></strong>
-          <ul>
-            <li>Voice gender modification</li>
-          </ul>
-        </li>
+      <p><i>Note: If you are a teacher and you are not on this list, please reach out!</i></p>
+      <ul class="shuffle">
+        <li><a href="https://discord.gg/q6mD3y7">Kelly</a></li>
+        <li><a href="https://ko-fi.com/amaroselessons/">AmaRoseLessons</a></li>
+        <li><a href="https://fluidvoice.studio/">Fluid Voice Studio</a></li>
+        <li><a href="https://sumianvoice.com/#">SumianVoice</a></li>
+        <li><a href="https://cramdvoicelessons.blog/">Scinguistics</a></li>
+        <li><a href="https://discord.gg/dbwrQMV">Savvy from Scientifically Augmented Voice</a></li>
+        <li><a href="https://www.transvoicelessons.com/">TransVoiceLessons</a></li>
+        <li><a href="https://voxnovastudio.com/">Vox Nova Studio</a></li>
+        <li><a href="https://www.transvoice.coach/">Voice Lessons with Adi</a></li>
       </ul>
       <h1 id="software">Software</h1>
-      <ul>
-        <li><a href="https://github.com/clo-yunhee/in-formant">InFormant</a></li>
-        <li><a href="https://acousticgender.space/">Acoustic Gender</a></li>
+      <h2>Real time voice analysis, with pitch and formant tracking</h2>
+      <p>These applications are designed for voice training.</p>
+      <ul class="shuffle">
+        <li><a href="https://github.com/clo-yunhee/in-formant">InFormant: Downloadable app for real-time pitch and
+            formant tracking</a></li>
+        <li><a href="https://spec.sumianvoice.com/">Spectrus: Web app for real-time pitch and formant tracking</a></li>
+      </ul>
+
+      <h2>Voice analysis (other)</h2>
+      <p>Some of these are not designed for trans voice training, or focus entirely on pitch. I personally believe
+        focusing on pitch only is harmful.</p>
+      <ul class="shuffle">
         <li><a href="http://friture.org/">Friture</a></li>
         <li><a href="https://www.audacityteam.org/">Audacity</a></li>
         <li><a href="https://play.google.com/store/apps/details?id=org.intoorbit.spectrum">Spectroid audio analyser for
             android</a></li>
         <li><a href="https://devextras.com/voicetools/">Voice Tools for voice therapy</a></li>
-        <li>(Paid) <a href="https://speechtools.co/voice-analyst">Voice Analyst for pitch tracking and recording</a>
+        <li><a href="https://speechtools.co/voice-analyst">Voice Analyst for pitch tracking and recording</a>
         </li>
         <li><a href="https://saoirse-zee.github.io/pitch/">Web app for pitch monitoring</a></li>
       </ul>
+      <h2>Miscellaneous</h2>
+      <ul>
+        <li><a href="https://acousticgender.space/">AcousticGender: Shows pitch and resonance with pre-recorded
+            sample</a></li>
+      </ul>
       <hr>
       <h1 id="transvoice">Contribute</h1>
-      <p>This website is maintained by <a href="https://j0.lol">jo!</a>, but you can help contribute!</p>
+      <p>This website is maintained by <a href="https://j0.lol">jo!</a>, but you can help contribute! Please reach out
+        if you notice any issues, or have any suggestions!</p>
       <ul>
         <li><a href="https://j0.lol">Contact jo!</a></li>
         <li><a href="https://discord.gg/8weEXE7RzU">Join the Discord guild</a></li>
         <li><a href="https://matrix.to/#/#transvoice:the-apothecary.club">Join the Matrix room</a></li>
         <li><a href="https://codeberg.org/j0/transvoice_party">View the source and PR</a></li>
       </ul>
+
+      <p><i>Disclaimer: Most lists are shuffled every time the page loads. This is to ensure there is no listing
+          favoured over another. If you have JavaScript disabled, this functionality is not available, so please
+          consider that the order shown is not indicative of favour.</i></p>
     </article>
   </main>
 </body>
